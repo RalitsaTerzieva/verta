@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, Query, Depends
-import schemas
+import schemas, crud
 
 app = FastAPI(title="Item Management API")
 
