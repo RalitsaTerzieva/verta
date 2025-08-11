@@ -1,3 +1,6 @@
 fastapi
 pydantic
 uvicorn
+sqlalchemy
+postgresql
+psycopg2-binary
