@@ -58,7 +58,7 @@ DATABASE_URL = "postgresql+psycopg2://myuser:mypassword@localhost:5432/mydb"
 ## 5️⃣ Run the application
 
 ```
-uvicorn app:app --reload
+uvicorn main:app --reload
 ```
 
 ### 🧪 Example Requests
@@ -67,7 +67,7 @@ uvicorn app:app --reload
 ```
 curl -X POST "http://127.0.0.1:8000/items/" \
      -H "Content-Type: application/json" \
-     -d '{"name": "Laptop", "description": "Workstation"}'
+     -d '{"name": "Laptop", "description": "Workstation", "price": 1200}'
 
 ```
 
@@ -75,9 +75,11 @@ curl -X POST "http://127.0.0.1:8000/items/" \
 
 ```
 {
-  "id": 1,
   "name": "Laptop",
-  "description": "Workstation"
+  "description": "Workstation",
+  "price": 1200.0,
+  "on_offer": false,
+  "id": 2
 }
 ```
 
@@ -92,9 +94,11 @@ curl -X GET "http://127.0.0.1:8000/items-list/"
 ```
 [
   {
-    "id": 1,
-    "name": "Laptop",
-    "description": "Workstation"
-  }
+  "name": "Laptop",
+  "description": "Workstation",
+  "price": 1200.0,
+  "on_offer": false,
+  "id": 2
+}
 ]
 ```
