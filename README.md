@@ -12,3 +12,15 @@ PostgreSQL database connection with SQLAlchemy.
 Clean project structure with schemas, crud, and database modules.
 
 Built using FastAPI
+
+### 🛠️ Tech Stack
+
+⚡ FastAPI – High-performance Python web framework.
+
+🐘 PostgreSQL – Relational database.
+
+🧾 SQLAlchemy – ORM for database operations.
+
+🐍 Python 3.10+ – Programming language.
+
+🛡️ Pydantic – Data validation and settings management.
