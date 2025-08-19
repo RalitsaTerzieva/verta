@@ -24,3 +24,11 @@ Built using FastAPI
 🐍 Python 3.10+ – Programming language.
 
 🛡️ Pydantic – Data validation and settings management.
+
+### ⚙️ Installation & Setup
+## 1️⃣ Clone the repository
+
+```
+git clone https://github.com/RalitsaTerzieva/verta
+cd verta
+```
