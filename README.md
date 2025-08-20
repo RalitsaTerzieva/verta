@@ -32,3 +32,31 @@ Built using FastAPI
 git clone https://github.com/RalitsaTerzieva/verta
 cd verta
 ```
+
+## 2️⃣ Create a virtual environment
+
+```
+python -m venv venv
+source venv/bin/activate   # Linux / Mac
+venv\Scripts\activate
+```
+
+## 3️⃣ Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+## 4️⃣ Configure the database
+
+Edit database.py with your PostgreSQL credentials:
+
+```
+DATABASE_URL = "postgresql+psycopg2://myuser:mypassword@localhost:5432/mydb"
+```
+
+## 5️⃣ Run the application
+
+```
+uvicorn app:app --reload
+```
