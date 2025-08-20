@@ -102,3 +102,7 @@ curl -X GET "http://127.0.0.1:8000/items-list/"
 }
 ]
 ```
+
+### 👉 Interactive API docs available at:
+
+Swagger UI: http://127.0.0.1:8000/docs
