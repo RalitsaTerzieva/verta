@@ -60,3 +60,41 @@ DATABASE_URL = "postgresql+psycopg2://myuser:mypassword@localhost:5432/mydb"
 ```
 uvicorn app:app --reload
 ```
+
+### 🧪 Example Requests
+## ➕ Create an Item
+
+```
+curl -X POST "http://127.0.0.1:8000/items/" \
+     -H "Content-Type: application/json" \
+     -d '{"name": "Laptop", "description": "Workstation"}'
+
+```
+
+## Response
+
+```
+{
+  "id": 1,
+  "name": "Laptop",
+  "description": "Workstation"
+}
+```
+
+## 📋 List Items
+
+```
+curl -X GET "http://127.0.0.1:8000/items-list/"
+```
+
+## Response
+
+```
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "description": "Workstation"
+  }
+]
+```
