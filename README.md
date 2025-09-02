@@ -36,8 +36,8 @@ cd verta
 ## 2️⃣ Create a virtual environment
 
 ```
-python -m venv venv
-source venv/bin/activate   # Linux / Mac
+python -m venv env
+source env/bin/activate   # Linux / Mac
 venv\Scripts\activate
 ```
 
