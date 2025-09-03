@@ -4,6 +4,9 @@ from sqlalchemy.orm import sessionmaker
 from database import Base, get_db
 import crud, schemas, models
 
+SQLALCHEMY_DATABASE_URL = "postgresql+psycopg2://myuser:mypassword@localhost:5432/mydb_test"
+
+
 
 def test_create_item(db):
     # Prepare test data using your Pydantic schema
