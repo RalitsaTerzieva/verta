@@ -4,3 +4,4 @@ uvicorn
 sqlalchemy
 postgresql
 psycopg2-binary
+pytest
