@@ -1,4 +1,4 @@
-### 📦 Verta – Item Management API
+### 📦 Verta – Item Management API application
 
 A simple FastAPI + PostgreSQL application for managing items.
 Built with SQLAlchemy ORM and structured with CRUD logic for clean maintainability.
