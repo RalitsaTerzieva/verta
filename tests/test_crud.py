@@ -44,3 +44,27 @@ def test_create_item_with_on_offer_set_to_true(db):
 
     assert created_item.on_offer is True
     assert created_item.name == "Laptop"
+
+def test_create_item_with_no_description(db):
+    item_in = schemas.ItemCreate(name="Tablet", description=None, price=300)
+    created_item = crud.create_item(db, item_in)
+
+    assert created_item.description is None
+    assert created_item.name == "Tablet"
+
+def test_create_item_with_decimal_price(db):
+    item_in = schemas.ItemCreate(name="Headphones", description="Noise-cancelling", price=99.99)
+    created_item = crud.create_item(db, item_in)
+
+    assert created_item.price == 99.99
+    assert created_item.name == "Headphones"
+
+def test_create_multiple_items_have_unique_ids(db):
+    item1 = schemas.ItemCreate(name="Item1", description="First item", price=10)
+    item2 = schemas.ItemCreate(name="Item2", description="Second item", price=20)
+
+    created1 = crud.create_item(db, item1)
+    created2 = crud.create_item(db, item2)
+
+    assert created1.id != created2.id
+
